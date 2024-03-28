@@ -1,11 +1,11 @@
 import requests
 
 input_vector = {
-    "date": "32.01.2021",
-    "periods": -1,
-    "amount": 1000,
-    "rate": 15.0
+    "date": "31.01.2021",
+    "periods": 3,
+    "amount": 10_000,
+    "rate": 6.0
 }
 
-res = requests.post("http://127.0.0.1:3000/calculate_deposit")
+res = requests.post("http://localhost:3000/calculate_deposit", json=input_vector)
 print(res.json())
